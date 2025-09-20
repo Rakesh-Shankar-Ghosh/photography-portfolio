@@ -1,232 +1,297 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RAKESH SHANKAR GHOSH - About Me</title>
-    <meta
-      name="description"
-      content="Hello there, I'm RAKESH SHANKAR GHOSH – an intrepid explorer through the lens, on a relentless quest to capture the world's boundless wonders. Join me in unraveling the extraordinary through my lens as I embark on a visual journey like no other."
-    />
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
-    <link rel="stylesheet" href="output.css" />
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Alpine.js -->
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
-    ></script>
-    <!-- Start - Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <title>Wedding CV - Rakesh Shankar Ghosh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <!-- End - Fonts -->
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      .heading-font {
+        font-family: "Playfair Display", serif;
+      }
+      .card-gradient {
+        background: linear-gradient(to bottom right, #1e293b 0%, #334155 100%);
+      }
+      .header-gradient {
+        background: linear-gradient(to right, #4c1d95 0%, #3730a3 100%);
+      }
+      .gold-accent {
+        color: #d4af37;
+      }
+      .section-divider {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .floating {
+        animation: float 6s ease-in-out infinite;
+      }
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+    </style>
   </head>
 
-  <body
-    class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500"
-  >
-    <!-- Navbar -->
-    <header class="flex w-full overflow-hidden pt-10 pb-1">
-      <nav id="nav" x-data="{ open: false }" role="navigation" class="w-full">
-        <div
-          class="container mx-auto flex flex-wrap items-center md:flex-no-wrap"
-        >
-          <div class="mr-4 md:mr-8">
-            <a href="../index.html" class="text-2xl font-signika font-bold"
-              >About me</a
-            >
-          </div>
-          <div class="ml-auto md:hidden flex items-center justify-start">
-            <button
-              onclick="menuToggle()"
-              @click="open = !open"
-              class="tap-highlight-transparent text-black dark:text-white w-5 h-5 relative focus:outline-none"
-              @click="open = !open"
-            >
-              <span class="sr-only">Open main menu</span>
-              <div
-                class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
-              >
-                <span
-                  aria-hidden="true"
-                  class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
-                  :class="{'rotate-45': open,' -translate-y-1.5': !open }"
-                ></span>
-                <span
-                  aria-hidden="true"
-                  class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
-                  :class="{'opacity-0': open } "
-                ></span>
-                <span
-                  aria-hidden="true"
-                  class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
-                  :class="{'-rotate-45': open, ' translate-y-1.5': !open}"
-                ></span>
-              </div>
-            </button>
-          </div>
-          <div
-            id="menu"
-            class="w-full h-0 transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center"
-          >
-            <ul
-              id="ulMenu"
-              class="flex flex-col duration-300 ease-out md:space-x-5 sm:transition-none mt-5 md:flex-row md:items-center md:ml-auto md:mt-0 md:pt-0 md:border-0"
-            >
-              <li class="group transition duration-300">
-                <a href="../index.html" class="font-signika text-2xl"
-                  >PORTFOLIO
-                  <span
-                    class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"
-                  >
-                  </span>
-                </a>
-              </li>
-              <li class="group transition duration-300">
-                <a href="about_me.html" class="font-signika text-2xl"
-                  >ABOUT ME
-                  <span
-                    class="hidden md:block h-0.5 bg-black dark:bg-white"
-                  ></span>
-                </a>
-              </li>
-              <!-- <li class="group transition duration-300">
-              <a href="contact.html" class="font-signika text-2xl">CONTACT
-                <span
-                  class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white">
-                </span>
-              </a>
-            </li> -->
-            </ul>
-          </div>
+  <body class="text-gray-200">
+    <div class="max-w-4xl w-full rounded-2xl overflow-hidden shadow-2xl">
+      <!-- Header -->
+      <div class="header-gradient p-8 text-center relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mt-10 mr-10 opacity-10">
+          <i class="fas fa-ring text-white text-9xl"></i>
         </div>
-      </nav>
-    </header>
-    <!-- Content -->
-    <div class="container mx-auto">
-      <h1 class="text-4xl pt-10 pb-8"><b>RAKESH SHANKAR GHOSH</b></h1>
-      <div class="grid grid-cols-2 gap-14 md:gap-20">
-        <div class="col-span-2 md:col-span-1">
-          <div
-            class="bg-white dark:bg-neutral-900 p-5 pb-28 m-6 md:m-12 shadow-lg border border-gray-100 dark:border-neutral-800 hover:rotate-0 transition duration-500 -rotate-6 relative"
+        <h1 class="text-4xl md:text-5xl font-bold heading-font">
+          Rakesh Shankar Ghosh
+        </h1>
+        <p class="mt-2 text-xl gold-accent">Software Engineer</p>
+        <p class="text-sm mt-1 opacity-80">Date of Birth: 9th August 1996</p>
+
+        <div class="mt-6 flex justify-center space-x-4">
+          <a
+            href="https://www.linkedin.com/in/rakesh-shankar-ghosh/"
+            target="_blank"
+            class="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-all duration-300"
           >
-            <img
-              src="../src//img/a.jpeg"
-              alt=""
-              class="smooth-edges flex flex-col w-full aspect-square object-cover h-auto"
-            />
-            <div class="absolute bottom-0 left-0 right-0 text-center">
-              <p
-                class="text-gray-800 dark:text-slate-200 pb-7 h-full text-6xl font-nothingyoucoulddo"
+            <i class="fab fa-linkedin-in text-lg"></i>
+          </a>
+          <a
+            href="https://wa.me/8801758997679"
+            target="_blank"
+            class="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-all duration-300"
+          >
+            <i class="fab fa-whatsapp text-lg"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="card-gradient p-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Photo & Personal Info -->
+          <div class="md:col-span-1">
+            <div class="flex justify-center">
+              <div class="relative floating">
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+                  alt="Profile"
+                  class="w-56 h-64 object-cover rounded-xl shadow-lg border-2 border-purple-500/30"
+                />
+                <div
+                  class="absolute -bottom-3 -right-3 bg-purple-700 rounded-full w-12 h-12 flex items-center justify-center"
+                >
+                  <i class="fas fa-heart gold-accent"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 bg-slate-800/50 p-5 rounded-xl shadow-md">
+              <h2
+                class="text-xl font-semibold gold-accent heading-font border-b border-white/10 pb-2 mb-3"
               >
-                Rakesh
-              </p>
+                <i class="fas fa-user-circle mr-2"></i>Personal Details
+              </h2>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <i class="fas fa-signature gold-accent mt-1 mr-3"></i>
+                  <span><b>Zodiac:</b> Leo</span>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
-        <section
-          class="font-normal text-center text-base md:text-start mx-3 col-span-2 md:col-span-1 my-auto"
-        >
-          <div class="block md:hidden">
-            <p class="text-3xl font-serif font-bold mb-1">Hello there,</p>
-            <p class="text-3xl font-serif font-bold mb-6">
-              I'm Rakesh<span class="animate-wave">👋</span>
-            </p>
-          </div>
-          <p class="hidden md:block text-3xl font-serif font-bold mb-6">
-            Hello there, I'm Rakesh
-            <span class="animate-wave">👋</span>
-          </p>
-          <p class="mb-4">
-            I'm a San Francisco-based photographer with over 6 years of
-            experience in capturing unforgettable moments. I specialize in
-            creating images that are both visually striking and emotionally
-            impactful, and I have developed a signature style that blends
-            natural beauty with vibrant colors and bold compositions.
-          </p>
-          <p class="mb-4">
-            When I'm not behind the camera, you can find me exploring the city's
-            diverse neighborhoods, trying out new restaurants, or spending time
-            with my family and friends. I believe that every moment is an
-            opportunity to experience something new and to create memories that
-            will last a lifetime.
-          </p>
-          <p>
-            Thank you for taking the time to learn a little bit about me and my
-            work. If you're interested in collaborating or would like to see
-            more of my portfolio, please don't hesitate to get in touch. Let's
-            work together to bring your vision to life!
-          </p>
-        </section>
-      </div>
-    </div>
-    <!-- Footer -->
-    <footer>
-      <div class="max-w-screen-xl py-16 mx-auto">
-        <div class="grid grid-cols-1 gap-8 text-center mx-auto">
-          <div>
-            <p class="font-signika"><b>RAKESH SHANKAR GHOSH</b></p>
-            <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">
-              Khulna, Bangladesh<br />
-            </p>
-            <div class="flex mx-auto">
-              <div
-                class="mx-auto space-x-6 flex mt-8 text-gray-600 dark:text-gray-300"
+
+          <!-- Details Sections -->
+          <div class="md:col-span-2 space-y-8">
+            <!-- Career -->
+            <div class="bg-slate-800/50 p-5 rounded-xl shadow-md">
+              <h2
+                class="text-xl font-semibold gold-accent heading-font border-b border-white/10 pb-2 mb-4"
               >
-                <a
-                  class="transition duration-300 hover:opacity-75"
-                  href="https://www.linkedin.com/in/rakesh-shankar-ghosh/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span class="sr-only">LinkedIn</span>
-                  <svg
-                    class="w-6 h-6"
-                    fill="currentColor"
-                    viewBox="0 0 16 16"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
-                    />
-                  </svg>
-                </a>
-                <a
-                  class="transition duration-300 hover:opacity-75"
-                  href="https://wa.me/8801758997679"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span class="sr-only">WhatsApp</span>
-                  <svg
-                    class="w-6 h-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M20.52 3.48A11.76 11.76 0 0012 0C5.38 0 .03 5.36.03 12c0 2.11.55 4.17 1.6 5.97L0 24l6.25-1.64a11.92 11.92 0 005.75 1.46h.01c6.62 0 11.97-5.36 11.97-12 0-3.2-1.24-6.22-3.46-8.45zM12 22c-1.8 0-3.56-.48-5.1-1.39l-.37-.22-3.71.98.99-3.62-.24-.37A9.98 9.98 0 012 12C2 6.48 6.48 2 12 2c2.66 0 5.18 1.04 7.07 2.93A9.98 9.98 0 0122 12c0 5.52-4.48 10-10 10zm5.04-7.45c-.29-.14-1.7-.84-1.96-.93-.26-.1-.45-.14-.64.14-.19.28-.74.93-.91 1.12-.17.19-.34.21-.63.07a8.29 8.29 0 01-2.43-1.5 9.12 9.12 0 01-1.7-2.14c-.18-.31-.02-.48.13-.62.13-.13.3-.34.45-.51.15-.17.2-.29.3-.49.1-.2.05-.37-.03-.51-.08-.14-.64-1.54-.88-2.1-.23-.56-.47-.48-.64-.49l-.54-.01c-.17 0-.45.07-.68.34a2.86 2.86 0 00-.9 2.13c0 1.26.9 2.48 1.02 2.66.13.17 1.78 2.71 4.33 3.8.6.26 1.06.42 1.43.53.6.19 1.14.16 1.57.1.48-.07 1.7-.7 1.94-1.37.24-.67.24-1.24.17-1.37-.07-.13-.26-.21-.55-.35z"
-                    />
-                  </svg>
-                </a>
-              </div>
+                <i class="fas fa-briefcase mr-2"></i>Career
+              </h2>
+              <ul class="space-y-4">
+                <li class="flex">
+                  <div class="mr-4 mt-1">
+                    <div class="w-3 h-3 rounded-full bg-purple-600"></div>
+                  </div>
+                  <div>
+                    <h3 class="font-medium">Software Engineer</h3>
+                    <p class="text-sm opacity-80">
+                      Intelligent Resources International Ltd, Dhaka, Bangladesh
+                    </p>
+                  </div>
+                </li>
+                <li class="flex">
+                  <div class="mr-4 mt-1">
+                    <div class="w-3 h-3 rounded-full bg-purple-600"></div>
+                  </div>
+                  <div>
+                    <h3 class="font-medium">Former Research Assistant</h3>
+                    <p class="text-sm opacity-80">
+                      Khulna University of Engineering & Technology (KUET)
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Education -->
+            <div class="bg-slate-800/50 p-5 rounded-xl shadow-md">
+              <h2
+                class="text-xl font-semibold gold-accent heading-font border-b border-white/10 pb-2 mb-4"
+              >
+                <i class="fas fa-graduation-cap mr-2"></i>Education
+              </h2>
+              <ul class="space-y-4">
+                <li class="flex">
+                  <div class="mr-4 mt-1">
+                    <div class="w-3 h-3 rounded-full bg-purple-600"></div>
+                  </div>
+                  <div>
+                    <h3 class="font-medium">
+                      M.Sc. Eng in Computer Science & Engineering
+                    </h3>
+                    <p class="text-sm opacity-80">
+                      Khulna University of Engineering & Technology (KUET) –
+                      CGPA 3.75
+                    </p>
+                  </div>
+                </li>
+                <li class="flex">
+                  <div class="mr-4 mt-1">
+                    <div class="w-3 h-3 rounded-full bg-purple-600"></div>
+                  </div>
+                  <div>
+                    <h3 class="font-medium">
+                      B.Sc. Eng in Computer Science & Engineering
+                    </h3>
+                    <p class="text-sm opacity-80">
+                      American International University-Bangladesh (AIUB) – CGPA
+                      3.72
+                    </p>
+                  </div>
+                </li>
+                <li class="flex">
+                  <div class="mr-4 mt-1">
+                    <div class="w-3 h-3 rounded-full bg-purple-600"></div>
+                  </div>
+                  <div>
+                    <h3 class="font-medium">
+                      Higher Secondary Certificate (HSC) - 2014
+                    </h3>
+                    <p class="text-sm opacity-80">GPA 5.00</p>
+                  </div>
+                </li>
+                <li class="flex">
+                  <div class="mr-4 mt-1">
+                    <div class="w-3 h-3 rounded-full bg-purple-600"></div>
+                  </div>
+                  <div>
+                    <h3 class="font-medium">
+                      Secondary School Certificate (SSC) - 2012
+                    </h3>
+                    <p class="text-sm opacity-80">GPA 5.00</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Family -->
+            <div class="bg-slate-800/50 p-5 rounded-xl shadow-md">
+              <h2
+                class="text-xl font-semibold gold-accent heading-font border-b border-white/10 pb-2 mb-4"
+              >
+                <i class="fas fa-users mr-2"></i>Family
+              </h2>
+              <ul class="space-y-4">
+                <li class="flex">
+                  <div class="mr-4 mt-1">
+                    <div class="w-3 h-3 rounded-full bg-purple-600"></div>
+                  </div>
+                  <div>
+                    <h3 class="font-medium">Father</h3>
+                    <p class="text-sm opacity-80">
+                      Ashoke Kumar Ghosh <br />
+                      Retired Government Officer, National Board of Revenue -
+                      Income Tax
+                    </p>
+                  </div>
+                </li>
+                <li class="flex">
+                  <div class="mr-4 mt-1">
+                    <div class="w-3 h-3 rounded-full bg-purple-600"></div>
+                  </div>
+                  <div>
+                    <h3 class="font-medium">Mother</h3>
+                    <p class="text-sm opacity-80">
+                      Reba Ghosh <br />
+                      Housewife
+                    </p>
+                  </div>
+                </li>
+                <li class="flex">
+                  <div class="mr-4 mt-1">
+                    <div class="w-3 h-3 rounded-full bg-purple-600"></div>
+                  </div>
+                  <div>
+                    <h3 class="font-medium">Elder Sister</h3>
+                    <p class="text-sm opacity-80">
+                      Paromit Ghosh
+                      <br />
+                      Bangladesh Civil Service - BCS Agriculture Officer
+                    </p>
+                  </div>
+                </li>
+                <li class="flex">
+                  <div class="mr-4 mt-1">
+                    <div class="w-3 h-3 rounded-full bg-purple-600"></div>
+                  </div>
+                  <div>
+                    <h3 class="font-medium">Brother-in-law</h3>
+                    <p class="text-sm opacity-80">
+                      Liton Kumar Ghosh<br />
+                      Engineer (BUET), Manager at Bangladesh Steel Re-Rolling
+                      Mills - BSRM
+                    </p>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
 
+        <!-- Quote Section -->
+        <div
+          class="mt-10 text-center py-6 px-4 bg-purple-900/30 rounded-xl border border-purple-700/30"
+        >
+          <i class="fas fa-quote-left text-2xl gold-accent opacity-50"></i>
+          <p class="text-lg italic max-w-2xl mx-auto">
+            Seeking a partner to build a beautiful life together, filled with
+            love, respect, and shared dreams.
+          </p>
+        </div>
       </div>
-    </footer>
-    <script src="fade_in.js"></script>
-    <script src="menu.js"></script>
+    </div>
   </body>
 </html>
